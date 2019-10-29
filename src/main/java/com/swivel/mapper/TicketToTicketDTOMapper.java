@@ -1,0 +1,13 @@
+package com.swivel.mapper;
+
+import com.swivel.dto.TicketDTO;
+import com.swivel.model.Ticket;
+import org.mapstruct.Mapper;
+import org.mapstruct.factory.Mappers;
+
+@Mapper
+public interface TicketToTicketDTOMapper {
+
+    TicketToTicketDTOMapper INSTANCE = Mappers.getMapper(TicketToTicketDTOMapper.class);
+    TicketDTO ticketToTicketDTO(Ticket ticket);
+}
